@@ -27,7 +27,6 @@ class Bomb(pygame.sprite.Sprite):
     image_boom = load_image("goblin_boom.png")
 
     def __init__(self, group):
-        # Ќ≈ќЅ’ќƒ»ћќ вызвать конструктор родительского класса Sprite. Ёто очень важно !!!
         super().__init__(group)
         self.image = Bomb.image
         self.rect = self.image.get_rect()
@@ -39,11 +38,9 @@ class Bomb(pygame.sprite.Sprite):
             self.image = self.image_boom
 
 
-# группа, содержаща€ все спрайты
 all_sprites = pygame.sprite.Group()
 
 for i in range(20):
-    # нам уже не нужно даже им€ объекта!
     Bomb(all_sprites)
 
 running = True
